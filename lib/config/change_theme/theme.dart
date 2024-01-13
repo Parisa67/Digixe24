@@ -14,7 +14,7 @@ class Theme {
     Color secondaryTextColor = darkGrayColor;
 ThemeData.dark();
     final darkTheme = ThemeData(
-        fontFamily: 'Dana',
+        // fontFamily: 'Dana',
         useMaterial3: true,
       disabledColor:darkGrayColor,
         colorScheme:ColorScheme.dark(
@@ -60,49 +60,49 @@ shadow: secondaryTextColor,
         ),
         textTheme:  TextTheme(
             titleLarge: TextStyle(
-              // fontFamily: 'Dana',
-
+              fontFamily: 'Dana',
+              fontWeight: FontWeight.w800,
                 color: primaryTextColor,
                 fontSize: ScreenUtil().setSp(18),
-              fontWeight: FontWeight.bold,
+
             ),
         titleMedium: TextStyle(
-          // fontFamily: FontFamily.avenir,
+            fontFamily: 'Dana',
+            fontWeight: FontWeight.w600,
             color: primaryTextColor,
-            // fontWeight: FontWeight.w200,
             fontSize: ScreenUtil().setSp(14)
         ),
           titleSmall: TextStyle(
-            // fontFamily: FontFamily.avenir,
+            fontFamily: 'Dana',
+            fontWeight: FontWeight.w600,
               color: primaryTextColor,
-              // fontWeight: FontWeight.w200,
               fontSize: ScreenUtil().setSp(12),
           ),
             bodySmall: TextStyle(
-              // fontFamily: FontFamily.avenir,
+                fontFamily: 'Dana',
+                fontWeight: FontWeight.w200,
                 color: secondaryTextColor,
-                // fontWeight: FontWeight.w200,
                 fontSize: ScreenUtil().setSp(8)
 
           ),
           labelSmall: TextStyle(
-            // fontFamily: FontFamily.avenir,
+              fontFamily: 'Dana',
+              fontWeight: FontWeight.w400,
               color: contentBoxGreenColor,
-              // fontWeight: FontWeight.w200,
               fontSize: ScreenUtil().setSp(10)
 
           ),
           headlineSmall: TextStyle(
-            // fontFamily: FontFamily.avenir,
+              fontFamily: 'Dana',
+              fontWeight: FontWeight.w400,
               color: primaryTextColor,
-              // fontWeight: FontWeight.w200,
               fontSize: ScreenUtil().setSp(10)
 
           ),
           headlineMedium: TextStyle(
-            // fontFamily: FontFamily.avenir,
+              fontFamily: 'Dana',
+              fontWeight: FontWeight.w400,
               color: primaryTextColor,
-              // fontWeight: FontWeight.w200,
               fontSize: ScreenUtil().setSp(10)
 
           ),
@@ -116,7 +116,7 @@ shadow: secondaryTextColor,
     Color secondaryTextColor = const Color.fromRGBO(132, 139, 153, 1);
 
     final lightTheme = ThemeData(
-        fontFamily: 'Dana',
+        // fontFamily: 'Dana',
         useMaterial3: true,
         disabledColor:lightGrayColor,
         colorScheme:ColorScheme.light(
@@ -138,48 +138,48 @@ shadow: secondaryTextColor,
         textTheme:  TextTheme(
 
           titleLarge: TextStyle(
-            // fontFamily: FontFamily.avenir,
+             fontFamily: 'Dana',
+              fontWeight: FontWeight.w800,
               color: primaryTextColor,
-              fontWeight: FontWeight.bold,
               fontSize: ScreenUtil().setSp(18)
           ),
           titleMedium: TextStyle(
-            // fontFamily: FontFamily.avenir,
+              fontFamily: 'Dana',
+              fontWeight: FontWeight.w600,
               color: primaryTextColor,
-              // fontWeight: FontWeight.w200,
               fontSize: ScreenUtil().setSp(14)
           ),
           titleSmall: TextStyle(
-            // fontFamily: FontFamily.avenir,
-            color: primaryTextColor,
-            // fontWeight: FontWeight.w200,
+              fontFamily: 'Dana',
+              fontWeight: FontWeight.w600,
+              color: primaryTextColor,
             fontSize: ScreenUtil().setSp(12)
             ),
           bodySmall: TextStyle(
-            // fontFamily: FontFamily.avenir,
+              fontFamily: 'Dana',
+              fontWeight: FontWeight.w200,
               color: secondaryTextColor,
-              // fontWeight: FontWeight.w200,
               fontSize: ScreenUtil().setSp(8)
 
           ),
           labelSmall: TextStyle(
-            // fontFamily: FontFamily.avenir,
+              fontFamily: 'Dana',
+              fontWeight: FontWeight.w400,
               color: contentBoxGreenColor,
-              // fontWeight: FontWeight.w200,
               fontSize: ScreenUtil().setSp(10)
 
           ),
           headlineSmall: TextStyle(
-            // fontFamily: FontFamily.avenir,
+              fontFamily: 'Dana',
+              fontWeight: FontWeight.w400,
               color: lightGrayColor,
-              // fontWeight: FontWeight.w200,
               fontSize: ScreenUtil().setSp(10)
 
           ),
           headlineMedium: TextStyle(
-            // fontFamily: FontFamily.avenir,
+              fontFamily: 'Dana',
+              fontWeight: FontWeight.w400,
               color: primaryTextColor,
-              // fontWeight: FontWeight.w200,
               fontSize: ScreenUtil().setSp(10)
 
           ),

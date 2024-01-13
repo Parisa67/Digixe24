@@ -1,4 +1,4 @@
-name: digix24
+name: digiex24
 description: A new Flutter project.
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
@@ -44,6 +44,9 @@ dependencies:
   flutter_image_slideshow: ^0.1.6
   carousel_indicator: ^1.0.6
   dio: ^5.3.2
+  equatable: ^2.0.5
+  bloc: ^8.1.2
+
 
 dev_dependencies:
   flutter_test:
@@ -86,16 +89,19 @@ flutter:
   fonts:
      - family: Dana
        fonts:
-         - asset: assets/fonts/dana-black.woff
-         - asset: assets/fonts/dana-bold.woff
-         - asset: assets/fonts/dana-demibold.woff
-         - asset: assets/fonts/dana-regular.woff
-         - asset: assets/fonts/dana-medium.woff
-         - asset: assets/fonts/dana-thin.woff
-         - asset: assets/fonts/dana-extrabold.woff
-         - asset: assets/fonts/dana-extralight.woff
-         - asset: assets/fonts/dana-light.woff
-         - asset: assets/fonts/dana-ultrabold.woff
+#         - asset: assets/fonts/dana-black.ttf
+         - asset: assets/fonts/dana-bold.ttf
+           weight: 800
+#         - asset: assets/fonts/dana-demibold.ttf
+#         - asset: assets/fonts/dana-regular.ttf
+         - asset: assets/fonts/dana-medium.ttf
+           weight: 600
+#         - asset: assets/fonts/dana-thin.ttf
+#         - asset: assets/fonts/dana-extrabold.ttf
+#         - asset: assets/fonts/dana-extralight.ttf
+         - asset: assets/fonts/dana-light.ttf
+           weight: 400
+#         - asset: assets/fonts/dana-ultrabold.ttf
 
 
   #

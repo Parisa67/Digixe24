@@ -3,16 +3,12 @@ import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-// import 'package:flutter_screenutil/flutter_screenutil.dart';
-
 import 'MainScreen2.dart';
-import 'MainScreen3.dart';
+import 'main_screen3.dart';
 import 'config/change_theme/cubit/theme_cubit.dart';
 import 'config/change_theme/theme.dart';
 import 'config/static_helper.dart';
-import 'features/feature_1/presentation/screens/home_page.dart';
-import 'features/feature_login/presentation/screens/login_page.dart';
-import 'features/feature_1/presentation/screens/home_page.dart';
+import 'features/feature_home/presentation/screens/home_page.dart';
 
 void main() async {
   SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(

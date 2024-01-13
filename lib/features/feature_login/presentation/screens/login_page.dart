@@ -1,10 +1,9 @@
-import 'dart:ffi';
 
-import 'package:flutter/cupertino.dart';
+import 'package:digiex24/features/feature_login/data/data_source/remote/api_login.dart';
+import 'package:digiex24/features/feature_login/data/repository/login_OTP_data_repository.dart';
+import 'package:digiex24/features/feature_login/domain/usecases/get_login_otp_usecase.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
-import '../../../../config/change_theme/color.dart';
 import '../../../../config/font_size.dart';
 import '../../../../core/widgets/custume_bottom.dart';
 
@@ -17,9 +16,12 @@ class LoginPage extends StatefulWidget {
 
 class _LoginPageState extends State<LoginPage> {
   TextEditingController numberController = TextEditingController();
+  bool isLoading=false;
   @override
   Widget build(BuildContext context) {
     final themeData = Theme.of(context);
+    GetLoginOTPUseCase  getLoginOTPUseCase =GetLoginOTPUseCase(LoginOTPDataRepository(ApiLogin()));
+    getLoginOTPUseCase('09304348909');
     return Scaffold(
       body: Padding(
         padding: EdgeInsets.only(left: ScreenUtil().setWidth(16),right: ScreenUtil().setWidth(16)),
@@ -75,13 +77,31 @@ class _LoginPageState extends State<LoginPage> {
               ),
             ),
             SizedBox(height:  sizeW(20),),
-            CostumeBottom(text: "ورود",)
+            CostumeBottom(text: "ورود",onTap:() async{
+              FocusScope.of(context).unfocus();
+              _login();
+            },)
           ],
         ),
       ),
     );
   }
-
+Future _login()async{
+    try{
+      if(numberController.text.trim() !=""){
+setState(() {
+  isLoading=true;
+});
+      }else{
+        const snackBar = SnackBar(
+          content: Text('شماره تلفن را وارد کنید'),
+        );
+        ScaffoldMessenger.of(context).showSnackBar(snackBar);
+      }
+    }catch(e){}finally{setState(() {
+      isLoading=false;
+    });}
+}
   double sizeW(int value){
     return ScreenUtil().setWidth(value);
   }

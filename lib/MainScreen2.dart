@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import 'features/feature_1/presentation/widgets/carousel_indicator.dart';
+import 'features/feature_home/presentation/widgets/carousel_indicator.dart';
 
 class MainScreen2 extends StatefulWidget {
   const MainScreen2({super.key});
@@ -18,7 +18,7 @@ class _MainScreen2State extends State<MainScreen2> {
   @override
   Widget build(BuildContext context) {
     final themeData = Theme.of(context);
-    List<Widget> _demo=[
+    List<Widget> demo=[
       Container(
         width: MediaQuery.of(context).size.width,
         // color:Colors.red,
@@ -40,7 +40,7 @@ class _MainScreen2State extends State<MainScreen2> {
                       Text("خانه",style:themeData.textTheme.headlineSmall ,),
                     ],
                   ),
-                  onTap:(){ print("object");}
+                  onTap:(){ }
               ),
               InkWell(
                   child: Column(
@@ -52,7 +52,7 @@ class _MainScreen2State extends State<MainScreen2> {
                       Text("بازار",style:themeData.textTheme.headlineSmall ,),
                     ],
                   ),
-                  onTap:(){ print("object");}
+                  onTap:(){ }
               ),
               InkWell(
                   child: Column(
@@ -64,7 +64,7 @@ class _MainScreen2State extends State<MainScreen2> {
                       Text("خرید و فروش",style:themeData.textTheme.headlineSmall ,),
                     ],
                   ),
-                  onTap:(){ print("object");}
+                  onTap:(){ }
               ),
               InkWell(
                   child: Column(
@@ -76,7 +76,7 @@ class _MainScreen2State extends State<MainScreen2> {
                       Text("کیف پول",style:themeData.textTheme.headlineSmall ,),
                     ],
                   ),
-                  onTap:(){ print("object");}
+                  onTap:(){}
               ),
               InkWell(
                   child: Column(
@@ -88,7 +88,7 @@ class _MainScreen2State extends State<MainScreen2> {
                       Text("حساب کاربری",style:themeData.textTheme.headlineSmall ,),
                     ],
                   ),
-                  onTap:(){ print("object");}
+                  onTap:(){ }
               ),
 
             ],
@@ -117,7 +117,7 @@ class _MainScreen2State extends State<MainScreen2> {
                       Text("خانه",style:themeData.textTheme.headlineSmall ,),
                     ],
                   ),
-                  onTap:(){ print("object");}
+                  onTap:(){ }
               ),
               InkWell(
                   child: Column(
@@ -129,7 +129,7 @@ class _MainScreen2State extends State<MainScreen2> {
                       Text("بازار",style:themeData.textTheme.headlineSmall ,),
                     ],
                   ),
-                  onTap:(){ print("object");}
+                  onTap:(){ }
               ),
               InkWell(
                   child: Column(
@@ -141,7 +141,7 @@ class _MainScreen2State extends State<MainScreen2> {
                       Text("خرید و فروش",style:themeData.textTheme.headlineSmall ,),
                     ],
                   ),
-                  onTap:(){ print("object");}
+                  onTap:(){}
               ),
               InkWell(
                   child: Column(
@@ -153,7 +153,7 @@ class _MainScreen2State extends State<MainScreen2> {
                       Text("کیف پول",style:themeData.textTheme.headlineSmall ,),
                     ],
                   ),
-                  onTap:(){ print("object");}
+                  onTap:(){ }
               ),
               InkWell(
                   child: Column(
@@ -165,7 +165,7 @@ class _MainScreen2State extends State<MainScreen2> {
                       Text("حساب کاربری",style:themeData.textTheme.headlineSmall ,),
                     ],
                   ),
-                  onTap:(){ print("object");}
+                  onTap:(){ }
               ),
 
             ],
@@ -182,12 +182,11 @@ class _MainScreen2State extends State<MainScreen2> {
           height: 50,
           width: double.infinity,
           child: PageView(
-            children: _demo,
+            children: demo,
 
             onPageChanged: (index){
               setState(() {
                 pageIndex=index;
-                print((_demo.length-1)-index);
 
               });
             },
@@ -195,7 +194,7 @@ class _MainScreen2State extends State<MainScreen2> {
         ),
         const SizedBox(height: 10,),
         CarouselIndicator(
-          count: _demo.length,
+          count: demo.length,
           index: pageIndex,
           color: Colors.grey,
           activeColor: Colors.blue,
